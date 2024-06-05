@@ -23,7 +23,7 @@ class Database{
     public function _construct()
     {
         //set DSN
-        $dsn = 'mysql:host='.$this->host.';dbname='$this->dbname;
+        $dsn = 'mysql:host='.$this->host.';dbname='.$this->dbname;
         $options = array(
             PDO::ATTR_PERSISTENT => true,
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION

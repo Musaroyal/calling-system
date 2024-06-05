@@ -26,6 +26,24 @@ class Users{
             flash("register", "Please fill out all inputs");
             redirect("../signup.php");
         }
+
+        if(!preg_match("/^[a-zA-Z0-9]*$/", $data["usersUid"])){
+            flash("register", "Invalid username");
+            redirect("../signup.php");
+        }
+
+        if(!filter_var($data["userEmail"], FILTER_VALIDATE_EMAIL)){
+            flash("register", "Invalid email");
+            redirect("../signup.php");
+        }
+
+        if(strlen($data["userPwd"]) < 6){
+            flash("register", "Invalid password");
+            redirect("../signup.php");
+        }else if($data['usersPwd'] !==$data['pwdRepeat']){
+            flash("register", "Invalid password");
+            redirect("../signup.php");
+        }
     }
 }
 
