@@ -16,10 +16,10 @@ class Users{
 
         $data = [
             'usersName' => trim($_POST['usersName']),
-            'usersEmail' => trim($POST['usersEmail']),
-            'usersUid' => trim($POST['usersUid']),
-            'usersPwd' => trim($POST['usersPwd']),
-            'pwdRepeat' => trim($POST['pwdRepeat'])
+            'usersEmail' => trim($_POST['usersEmail']),
+            'usersUid' => trim($_POST['usersUid']),
+            'usersPwd' => trim($_POST['usersPwd']),
+            'pwdRepeat' => trim($_POST['pwdRepeat'])
         ];
 
         if(empty($data.['usersName']) || empty($data['usersEmail']) || empty($data['usersUid']) || empty($data['usersPwd']) || empty($data['pwdRepeat'])){
