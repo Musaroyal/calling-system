@@ -20,7 +20,7 @@ class Database{
     private $error;
 
 
-    public function __construct()
+    public function _construct()
     {
         //set DSN
         $dsn = 'mysql:host='.$this->host.';dbname='$this->dbname;

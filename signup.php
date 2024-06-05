@@ -1,9 +1,12 @@
 <?php
     include_once 'header.php';
+    include_once '../helpers/session_header.php';
 
 ?>
 
 <h1 class="header">please Signup</h1>
+
+<?php flash('register') ?>
 
 <form method="post" action="./controllers/Users.php">
     <input type="hidden" name="type" value="register">
